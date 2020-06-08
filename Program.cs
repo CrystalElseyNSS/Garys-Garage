@@ -20,9 +20,20 @@ namespace GarysGarage
             MyRam.MaximumOccupancy = "4";
             MyRam.FuelLevel = 3;
 
+
+            Console.WriteLine("And they're off!");
+            Console.WriteLine("---------------------------");
             MyVehicle.Drive();
+            MyVehicle.Turn("right");
+            MyVehicle.Stop();
+            Console.WriteLine("---------------------------");    
             MyTesla.Drive();
+            MyTesla.Turn("left");
+            MyTesla.Stop();
+            Console.WriteLine("---------------------------");
             MyRam.Drive();
+            MyRam.Turn("right, then left");
+            MyRam.Stop();
         }
     }
 }

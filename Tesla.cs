@@ -11,7 +11,7 @@ namespace GarysGarage
             if (BatteryKWh < 10)
             {
                 BatteryKWh += 20;
-                Console.WriteLine($"Power is low, charging battery... New power level: {BatteryKWh}");
+                Console.WriteLine($"Power low, now charging... New power level: {BatteryKWh}!");
             }
             else
             {
@@ -23,6 +23,16 @@ namespace GarysGarage
         {
             ChargeBattery();
             Console.WriteLine("Zoom Zoom!");
+        }
+
+        public override void Turn(string direction)
+        {
+            Console.WriteLine($"The {MainColor} Tesla just turned {direction}.");
+        }
+
+        public override void Stop()
+        {
+            Console.WriteLine($"The Tesla has purred to a stop.");
         }
     }
 }
